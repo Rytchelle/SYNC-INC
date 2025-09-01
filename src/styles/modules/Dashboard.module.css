@@ -1,0 +1,285 @@
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--bg), #fff 60%, var(--accent));
+}
+.banner {
+  width: 100vw;
+  max-width: 100vw;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 0;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: flex-end;
+}
+.bannerOverlay {
+  background: rgba(28,20,13,0.45);
+  color: #fff;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 2rem 3vw;
+}
+.main {
+  flex: 1;
+  width: 100%;
+  padding: 0 2vw 2vw 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 0.8s cubic-bezier(.39,.575,.565,1) forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: none; }
+}
+.scaleIn {
+  opacity: 0;
+  transform: scale(0.97);
+  animation: scaleIn 0.7s cubic-bezier(.39,.575,.565,1) forwards;
+}
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.gridMui {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.mapSection {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 260px;
+  max-width: 600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 0.8s;
+}
+.mapTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+.mapImage {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+.statusBadge {
+  display: inline-block;
+  padding: 0.3em 1em;
+  border-radius: 1em;
+  font-size: 0.95em;
+  font-weight: 600;
+  margin: 0 0.5em 0.5em 0;
+  background: var(--accent);
+  color: var(--primary);
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(243,130,32,0.3); }
+  70% { box-shadow: 0 0 0 10px rgba(243,130,32,0); }
+  100% { box-shadow: 0 0 0 0 rgba(243,130,32,0); }
+}
+.clock {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+.climateWidget {
+  background: linear-gradient(120deg, var(--accent) 60%, #fff 100%);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+  min-width: 220px;
+  width: 100%;
+  justify-content: flex-start;
+}
+.cardMui {
+  background: #fff;
+  border-radius: 1.2rem !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07) !important;
+  padding: 2rem 1.5rem !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 220px;
+  min-height: 210px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  animation: scaleIn 0.7s;
+  justify-content: center;
+  cursor: pointer;
+}
+.cardMui:hover {
+  box-shadow: 0 12px 32px rgba(243,130,32,0.13) !important;
+  transform: translateY(-6px) scale(1.03);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.cardMui h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+.cardMui p {
+  color: var(--muted);
+  font-size: 1rem;
+  text-align: center;
+}
+.cardMui .MuiCardContent-root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 !important;
+}
+.teamAvatars {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+.footer {
+  margin-top: 3rem;
+  color: var(--muted);
+  font-size: 1rem;
+  text-align: center;
+  opacity: 0.85;
+  padding-bottom: 1.5rem;
+}
+.gridHighlights {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  align-items: stretch;
+}
+
+.cardHighlight {
+  background: #fff;
+  border-radius: 1.2rem !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07) !important;
+  padding: 2rem 1.5rem !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 170px;
+  height: 100%;
+  transition: box-shadow 0.3s, transform 0.3s;
+  animation: scaleIn 0.7s;
+  cursor: pointer;
+}
+.cardHighlight:hover {
+  box-shadow: 0 12px 32px rgba(243,130,32,0.13) !important;
+  transform: translateY(-6px) scale(1.03);
+}
+.cardHighlight h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+.cardHighlight p {
+  color: var(--muted);
+  font-size: 1rem;
+  text-align: center;
+}
+.cardHighlight .MuiCardContent-root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .main {
+    padding: 0 1vw 2vw 1vw;
+  }
+  .gridMui {
+    gap: 1.2rem;
+  }
+  .mapSection {
+    padding: 1.2rem 0.5rem;
+  }
+  .gridHighlights {
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .banner {
+    height: 100px;
+    padding: 0;
+    max-width: 100vw;
+  }
+  .bannerOverlay {
+    padding: 0.7rem 2vw;
+    font-size: 0.95rem;
+  }
+  .main {
+    padding: 0 0.5vw 1vw 0.5vw;
+  }
+  .mapImage {
+    max-width: 95vw;
+  }
+  .climateWidget {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .cardMui {
+    min-height: 170px;
+    padding: 1.2rem 0.7rem !important;
+  }
+  .gridHighlights {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .cardHighlight {
+    min-height: 140px;
+    padding: 1.2rem 0.7rem !important;
+  }
+} 
