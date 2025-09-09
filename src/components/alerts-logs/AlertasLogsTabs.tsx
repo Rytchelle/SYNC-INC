@@ -9,7 +9,7 @@ interface AlertasLogsTabsProps {
 
 const AlertasLogsTabs: React.FC<AlertasLogsTabsProps> = ({ activeTab, onTabChange }) => {
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 mb-8">
+    <div className="bg-transparent backdrop-blur-md rounded-lg shadow-sm border border-gray-200/30 mb-8">
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs 
           value={activeTab} 

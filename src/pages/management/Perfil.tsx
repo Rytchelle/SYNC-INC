@@ -95,12 +95,8 @@ const Perfil: React.FC = () => {
       <main className={styles.main}>
         <div className={styles.content}>
 
-          <div className="mb-8">
-            <h1 className="text-3xl font-bold text-[var(--primary)] mb-2">Meu Perfil</h1>
-            <p className="text-[var(--muted)]">Gerencie suas informações pessoais e configurações</p>
-          </div>
-
-          <div className="grid grid-cols-1 xl:grid-cols-4 gap-6">
+  
+          <div className="grid grid-cols-1 xl:grid-cols-4 mt-20 gap-6">
 
             <div className="xl:col-span-3 space-y-6">
 

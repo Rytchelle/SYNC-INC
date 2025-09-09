@@ -5,7 +5,7 @@ const LandingHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
+    <header className="bg-transparent backdrop-blur-md border-b border-gray-100/30 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
 
@@ -79,7 +79,7 @@ const LandingHeader: React.FC = () => {
 
 
         {isMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100 py-4">
+          <div className="md:hidden bg-transparent backdrop-blur-md border-t border-gray-100/30 py-4">
             <div className="flex flex-col space-y-4 px-4">
               <Link 
                 to="/diferenciais" 
@@ -129,4 +129,4 @@ const LandingHeader: React.FC = () => {
   );
 };
 
-export default LandingHeader; 
+export default LandingHeader;

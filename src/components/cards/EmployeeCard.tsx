@@ -20,7 +20,7 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({
   status,
 }) => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center scale-in group hover:shadow-2xl transition-all duration-300 relative fade-in-up">
+    <div className="bg-transparent backdrop-blur-md rounded-2xl shadow-lg p-6 flex flex-col items-center scale-in group hover:shadow-2xl transition-all duration-300 relative fade-in-up border border-white/10">
       <div className="w-20 h-20 rounded-full overflow-hidden shadow-md mb-4">
         <img
           src={photo}
@@ -41,4 +41,4 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({
   );
 };
 
-export default EmployeeCard; 
+export default EmployeeCard;

@@ -39,7 +39,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         
         <Box sx={{ 
           flexGrow: 1,
-          backgroundColor: 'var(--bg)',
+          backgroundColor: 'transparent',
+          backdropFilter: 'blur(5px)',
           minHeight: 'calc(100vh - 64px - 48px)' // Header height - Breadcrumbs height
         }}>
           {children}

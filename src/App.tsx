@@ -17,6 +17,7 @@ const Usuarios = lazy(() => import('./pages/management/Usuarios'));
 const Configuracoes = lazy(() => import('./pages/management/Configuracoes'));
 const Manutencao = lazy(() => import('./pages/management/Manutencao'));
 const AlertasLogs = lazy(() => import('./pages/management/AlertasLogs'));
+const Relatorios = lazy(() => import('./pages/management/Relatorios'));
 const AdminDashboard = lazy(() => import('./pages/management/AdminDashboard'));
 const NotFound = lazy(() => import('./pages/error/NotFound'));
 const LandingPage = lazy(() => import('./pages/public/LandingPage'));
@@ -28,7 +29,7 @@ const App: React.FC = () => {
   return (
     <NotificationSystem>
       <Router>
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen">
           <Suspense fallback={<PageLoader />}>
             <Routes>
                 <Route path="/" element={<LandingPage />} />
@@ -43,6 +44,7 @@ const App: React.FC = () => {
                 <Route path="/configuracoes" element={<Configuracoes />} />
                 <Route path="/manutencao" element={<Manutencao />} />
                 <Route path="/alertas-logs" element={<AlertasLogs />} />
+                <Route path="/relatorios" element={<Relatorios />} />
                 <Route path="/admin" element={<AdminDashboard />} />
                 <Route path="/esqueceu-senha" element={<EsqueceuSenha />} />
                 <Route path="/diferenciais" element={<Diferenciais />} />

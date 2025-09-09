@@ -3,7 +3,7 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, var(--bg), #fff 60%, var(--accent));
+  /* Removido background explícito para usar o gradiente global */
 }
 
 .hero {
@@ -453,4 +453,4 @@
 @keyframes scale-in {
   from { transform: scale(0.95); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
-} 
+}

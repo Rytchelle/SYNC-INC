@@ -38,7 +38,7 @@ const Login: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <main className="flex-1 w-full flex items-center justify-center bg-gradient-to-br from-[var(--bg)] via-white to-[var(--accent)] fade-in">
+      <main className="flex-1 w-full flex items-center justify-center fade-in">
         <div className={styles.formBox}>
           <div className="mb-8 flex flex-col items-center">
             <div className={styles.logo}>

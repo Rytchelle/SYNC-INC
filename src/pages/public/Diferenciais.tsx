@@ -27,7 +27,7 @@ const Diferenciais: React.FC = () => {
   return (
     <>
       <LandingHeader />
-      <main className="min-h-screen w-full flex flex-col items-center bg-white py-10 px-4">
+      <main className="min-h-screen w-full flex flex-col items-center py-10 px-4">
         <section className="max-w-7xl w-full mx-auto text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-[var(--text)] mb-6 animate-fadeInUp">Por que escolher a <span className="text-[var(--primary)]">Sync</span>?</h1>
           <p className="text-xl text-[var(--muted)] max-w-3xl mx-auto mb-12 animate-fadeInUp" style={{ animationDelay: '100ms' }}>
@@ -54,4 +54,4 @@ const Diferenciais: React.FC = () => {
   );
 };
 
-export default Diferenciais; 
+export default Diferenciais;

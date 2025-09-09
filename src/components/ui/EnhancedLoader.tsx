@@ -124,7 +124,7 @@ const EnhancedLoader: React.FC<EnhancedLoaderProps> = ({
   // Component Loader
   if (type === 'component') {
     return (
-      <Box className="relative bg-white rounded-lg shadow-lg border border-[var(--accent)]">
+      <Box className="relative bg-transparent backdrop-blur-md rounded-lg shadow-lg border border-[var(--accent)]/30">
         <div className={`${getContainerSize()}`}>
           <LoadingContent />
         </div>

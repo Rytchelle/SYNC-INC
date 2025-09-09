@@ -76,7 +76,7 @@ const AlertasTab: React.FC<AlertasTabProps> = ({
       </div>
 
       {/* Filters Section */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <div className="bg-transparent backdrop-blur-md rounded-lg shadow-sm border border-gray-200/30 p-6">
         <FilterSection
           title="Filtrar Alertas"
           searchValue={alertSearchTerm}
@@ -87,7 +87,7 @@ const AlertasTab: React.FC<AlertasTabProps> = ({
       </div>
 
       {/* Alerts Grid */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <div className="bg-transparent backdrop-blur-md rounded-lg shadow-sm border border-gray-200/30 p-6">
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-lg font-semibold text-gray-900">
             Lista de Alertas ({filteredAlerts.length})

@@ -257,6 +257,14 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onToggle }) => {
     <Drawer
       variant="permanent"
       open={open}
+      PaperProps={{
+        sx: {
+          backgroundColor: 'transparent',
+          backgroundImage: 'none',
+          backdropFilter: 'blur(10px)',
+          borderRight: '1px solid rgba(255, 255, 255, 0.1)'
+        }
+      }}
       sx={{
         width: open ? 280 : 64,
         flexShrink: 0,

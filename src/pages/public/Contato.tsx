@@ -35,7 +35,7 @@ const Contato: React.FC = () => {
   return (
     <>
       <LandingHeader />
-      <main className="min-h-screen w-full flex flex-col items-center bg-white py-10 px-4">
+      <main className="min-h-screen w-full flex flex-col items-center py-10 px-4">
         <section className="max-w-xl w-full mx-auto text-center mb-10">
           <h1 className="text-3xl font-bold text-[var(--primary)] mb-4 animate-fadeInUp">Fale com a Sync</h1>
           <p className="text-base text-gray-700 mb-6 leading-relaxed animate-fadeInUp" style={{ animationDelay: '100ms' }}>
@@ -102,4 +102,4 @@ const Contato: React.FC = () => {
   );
 };
 
-export default Contato; 
+export default Contato;

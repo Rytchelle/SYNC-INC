@@ -3,7 +3,7 @@ import { FaBell } from 'react-icons/fa';
 
 const AlertasLogsHeader: React.FC = () => {
   return (
-    <div className="bg-white shadow-sm border-b border-gray-200 px-6 py-8">
+    <div className="bg-transparent backdrop-blur-md shadow-sm border-b border-gray-200/30 px-6 py-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center space-x-4 mb-4">
           <div className="p-3 bg-blue-100 rounded-lg">

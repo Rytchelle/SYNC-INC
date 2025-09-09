@@ -1,14 +1,39 @@
 :root {
-  --primary: #f38220;
-  --primary-dark: #d96c0a;
-  --accent: #f4ede7;
-  --bg: #fcfaf8;
-  --text: #1c140d;
-  --muted: #9c7049;
+  --primary: #05567b;
+  --primary-dark: #063a57;
+  --accent: #a7cbef;
+  --bg: #a8c3fa;
+  --text: #07050f;
+  --muted: #05021b;
   --success: #07880e;
   --danger: #e71008;
   --warning: #f38524;
+  
+  /* Novas cores de background com gradiente */
+  --bg-gradient-start: #d5d5d5;
+  --bg-gradient-end: #6f8283;
+  --bg-gradient: linear-gradient(to right, var(--bg-gradient-start), var(--bg-gradient-end));
 }
+
+
+
+:dark {
+  --primary: #05567b;
+  --primary-dark: #063a57;
+  --accent: #38332f;
+  --bg: #0b0b0b;
+  --text: #07050f;
+  --muted: #05021b;
+  --success: #07880e;
+  --danger: #e71008;
+  --warning: #f38524;
+  
+  /* Novas cores de background com gradiente para tema escuro */
+  --bg-gradient-start: #0a2a4a;
+  --bg-gradient-end: #05567b;
+  --bg-gradient: linear-gradient(to right, var(--bg-gradient-start), var(--bg-gradient-end));
+}
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -38,7 +63,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1.5;
-  background: var(--bg);
+  background: var(--bg-gradient);
   color: var(--text);
   font-family: 'Inter', 'Noto Sans', Arial, sans-serif;
   min-height: 100vh;
@@ -97,4 +122,4 @@ button {
 }
 .scale-in {
   animation: scale-in 0.5s cubic-bezier(.39,.575,.565,1) both;
-} 
+}

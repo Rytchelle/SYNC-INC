@@ -62,7 +62,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
   if (fullScreen) {
     return (
-      <Box className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">
+      <Box className="fixed inset-0 bg-opacity-90 flex items-center justify-center z-50">
         {spinner}
       </Box>
     );
@@ -70,7 +70,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
   if (overlay) {
     return (
-      <Box className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
+      <Box className="absolute inset-0 bg-opacity-75 flex items-center justify-center z-10">
         {spinner}
       </Box>
     );
@@ -79,4 +79,4 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   return spinner;
 };
 
-export default LoadingSpinner; 
+export default LoadingSpinner;

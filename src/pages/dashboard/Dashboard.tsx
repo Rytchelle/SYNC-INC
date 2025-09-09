@@ -146,7 +146,7 @@ const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="w-screen min-h-screen flex flex-col bg-white">
+    <div className="w-screen min-h-screen flex flex-col bg-transparent backdrop-blur-md">
       <Header />
       <main className="flex-1 w-full px-4 md:px-10 py-8 flex flex-col items-center bg-gradient-to-br from-[var(--bg)] via-[var(--accent)] to-[var(--primary)/10]">
         <div className="w-full max-w-7xl">
@@ -231,6 +231,7 @@ const Dashboard: React.FC = () => {
                       +8.5% vs mês anterior
                     </p>
                   </div>
+                  
                   <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
                     <FaCog className="text-purple-600 text-xl" />
                   </div>

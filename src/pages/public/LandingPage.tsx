@@ -2,6 +2,8 @@ import React from 'react';
 import { LandingHeader } from '../../components/layout';
 import { Link } from 'react-router-dom';
 import '../../styles/base/globals.css';
+import Carrosel from "../../components/carrosel/carrossel";
+
 import {
   FaRocket, FaChartLine, FaCogs, FaShieldAlt, FaUsers, FaCheckCircle,
   FaArrowRight, FaPlay, FaStar, FaQuoteLeft, FaLinkedin, FaTwitter, FaInstagram, FaGithub
@@ -9,66 +11,93 @@ import {
 
 const LandingPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <LandingHeader />
-      
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[var(--accent)] via-white to-[var(--primary)/5] overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
-          <div className="text-center">
-            <div className="inline-flex items-center gap-2 bg-[var(--primary)/10] text-[var(--primary)] px-4 py-2 rounded-full text-sm font-medium mb-8">
-              <FaRocket className="text-[var(--primary)]" />
-              <span>Nova versão disponível</span>
+       
+  <div className="relative w-full h-screen overflow-hidden">
+  {/* Vídeo de fundo */}
+  <video
+    src="/public/video/Design sem nome.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover z-0"
+  />
+
+  {/* Overlay opcional para escurecer o vídeo */}
+  <div className="absolute inset-0 bg-black/50 z-10"></div>
+
+  {/* Conteúdo acima do vídeo */}
+  <section className="relative z-20 flex flex-col items-center justify-start w-full h-full text-center px-4 pt-32">
+    <div className="max-w-7xl mx-auto space-y-6">
+
+      {/* Badge */}
+      <div className="inline-flex items-center gap-2 bg-[var(--primary)/20] text-[var(--primary)] px-4 py-2 rounded-full text-sm font-medium">
+        <FaRocket className="text-[var(--primary)]" />
+        <span>Nova versão disponível</span>
+      </div>
+
+            {/* Título */}
+            <div className=' bg-black/30 px-8 py-4 rounded-3xl leading-snug'>
+
+      <h1 className="text-5xl md:text-7xl font-bold text-white">
+        Automação Industrial
+        <span className="block text-[var(--primary)] mt-2">do Futuro</span>
+      </h1>
+
+      {/* Parágrafo */}
+      <p className="text-xl md:text-2xl text-white px-6 py-4 rounded-2xl max-w-3xl mx-auto leading-relaxed">
+        Transforme sua produção com tecnologia de ponta.
+        <span className="text-[var(--primary)] font-semibold">
+          {" "}Eficiência, controle e resultados
+        </span>{" "}
+        em uma única plataforma.
+      </p>
+
             </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold text-[var(--text)] mb-6 leading-tight">
-              Automação Industrial
-              <span className="block text-[var(--primary)]">do Futuro</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-[var(--muted)] mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transforme sua produção com tecnologia de ponta. 
-              <span className="text-[var(--primary)] font-semibold"> Eficiência, controle e resultados</span> em uma única plataforma.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link
-                to="/login"
-                className="group bg-gradient-to-r from-[var(--primary)] to-[var(--primary-dark)] text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3"
-              >
-                Começar Agora
-                <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-              
-              <button className="flex items-center gap-3 text-[var(--text)] hover:text-[var(--primary)] transition-colors duration-300">
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
-                  <FaPlay className="text-[var(--primary)] ml-1" />
-                </div>
-                <span className="font-medium">Ver demonstração</span>
-              </button>
-            </div>
-            
-            <div className="flex items-center justify-center gap-8 text-sm text-[var(--muted)]">
-              <div className="flex items-center gap-2">
-                <FaCheckCircle className="text-green-500" />
-                <span>Setup em 5 minutos</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaCheckCircle className="text-green-500" />
-                <span>Suporte 24/7</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaCheckCircle className="text-green-500" />
-                <span>99.9% uptime</span>
-              </div>
-            </div>
+      {/* Botões */}
+      <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <Link
+          to="/login"
+          className="group bg-gradient-to-r from-[var(--primary)] to-[var(--primary-dark)] text-white px-8 py-4 rounded-3xl font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3"
+        >
+          Começar Agora
+          <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
+        </Link>
+
+        <button className="flex items-center gap-3 text-white hover:text-[var(--primary)] transition-colors duration-300">
+          <div className="w-12 h-12 bg-transparent backdrop-blur-md border border-white rounded-full flex items-center justify-center shadow-lg">
+            <FaPlay className="text-white ml-1" />
           </div>
+          <span className="font-medium">Ver demonstração</span>
+        </button>
+      </div>
+
+      {/* Benefícios */}
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-white mt-6">
+        <div className="flex items-center gap-2">
+          <FaCheckCircle className="text-green-500" />
+          <span>Setup em 5 minutos</span>
         </div>
-      </section>
+        <div className="flex items-center gap-2">
+          <FaCheckCircle className="text-green-500" />
+          <span>Suporte 24/7</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <FaCheckCircle className="text-green-500" />
+          <span>99.9% uptime</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+  
 
       {/* Features Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[var(--text)] mb-6">
@@ -114,7 +143,7 @@ const LandingPage: React.FC = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="group p-8 bg-gradient-to-br from-white to-[var(--accent)] rounded-2xl border border-gray-100 hover:border-[var(--primary)/20] hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
+                className="group p-8 bg-transparent backdrop-blur-md rounded-2xl border border-gray-200 hover:border-[var(--primary)/20] hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
@@ -126,6 +155,11 @@ const LandingPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      
+
+
+
 
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-[var(--primary)] to-[var(--primary-dark)] text-white">
@@ -148,8 +182,27 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
+      
+
+
+{/* Features Section */}
+<section className="py-24">
+  {/* Conteúdo da seção */}
+</section>
+
+      
+{/* Carrossel */}
+<Carrosel />
+
+{/* Stats Section */}
+<section className="py-20 bg-gradient-to-r from-[var(--primary)] to-[var(--primary-dark)] text-white">
+  ...
+</section>
+
+
+
       {/* Testimonials Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[var(--text)] mb-6">
@@ -189,7 +242,7 @@ const LandingPage: React.FC = () => {
             ].map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-transparent backdrop-blur-md p-8 rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -233,7 +286,7 @@ const LandingPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/login"
-              className="bg-white text-[var(--primary)] px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3"
+              className="bg-transparent backdrop-blur-md border border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3"
             >
               Começar Gratuitamente
               <FaArrowRight />

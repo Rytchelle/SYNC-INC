@@ -64,7 +64,7 @@ const Breadcrumbs: React.FC = () => {
   }
 
   return (
-    <div className="bg-white border-b border-gray-200 px-4 md:px-10 py-3">
+    <div className="bg-transparent backdrop-blur-md border-b border-gray-200/20 px-4 md:px-10 py-3">
       <MuiBreadcrumbs
         separator={<FaChevronRight className="text-gray-400 text-xs" />}
         aria-label="breadcrumb"

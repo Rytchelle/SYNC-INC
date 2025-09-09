@@ -3,7 +3,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, var(--bg), #fff 60%, var(--accent));
+  /* Removido background explícito para usar o gradiente global */
 }
 .banner {
   width: 100vw;
@@ -282,4 +282,4 @@
     min-height: 140px;
     padding: 1.2rem 0.7rem !important;
   }
-} 
+}
