@@ -517,3 +517,5 @@ copies or substantial portions of the Software.
 [![Made with Love](https://img.shields.io/badge/Made%20with-Love-red.svg)](https://github.com/seu-usuario/sync-industrial)
 
 </div>
+#   S Y N C - F R O N T - E N D D  
+ 
